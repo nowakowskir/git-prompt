@@ -13,7 +13,7 @@ user@host:~/project/submodule/ another-repo [master]$
 
 ## Installation
 
-```[ -f $(pwd)/git-prompt.sh ] && tail -n +3 $(pwd)/git-prompt.sh >> ~/.bashrc && source ~/.bashrc```
+```tail -n +3 git-prompt.sh >> ~/.bashrc && source ~/.bashrc```
 
 
 
