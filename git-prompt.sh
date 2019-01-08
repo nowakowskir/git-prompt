@@ -3,7 +3,7 @@
 # Get current branch name, if remote origin exists
 git_reponame() {
 	REPO=$(git remote get-url origin 2>/dev/null)
-	[ "$?" = "0" ] && { NAME=${REPO: : -4}; echo -n ' '$(basename $NAME); }
+	[ "$?" = "0" ] && { [ "${REPO: -4}" = ".git" ] && NAME=${REPO: : -4} || NAME=$REPO; echo -n ' '$(basename $NAME); }
 }
 
 # Get current branch name
